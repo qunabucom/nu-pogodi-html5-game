@@ -83,12 +83,25 @@ NuPogodi.PreloadState.prototype = {
             'start'
         ];
 
+        var pngs = [
+          'wolf-left',
+          'wolf-right',
+          'button-left-down',
+          'button-left-up',
+          'button-right-down',
+          'button-right-up',
+          'basket-left-up',
+          'basket-left-down',
+          'basket-right-up',
+          'basket-right-down',
+        ]
+
         // loading images using array of names
         for (var i = 0; i < imagesData.length; i++) {
             this.game.load.image(imagesData[i],
                     './assets/sprites/'
                     + imagesData[i]
-                    + '.svg');
+                    + (pngs.indexOf(imagesData[i]) == -1 ? '.svg' : '.png'));
         }
 
         // spritesheet with blinking bird

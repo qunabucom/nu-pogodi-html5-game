@@ -14,9 +14,33 @@ module.exports = function(grunt) {
                     ]
                 }
             }
-        }
+        },
+        watch: {
+            options: {
+                livereload: true
+            },
+            sass: {
+                files: ['sass/{,**/}*.{scss,sass}'],
+                tasks: ['compass:dev'],
+                options: {
+                    livereload: false
+                }
+            },
+            images: {
+                files: ['img/**']
+            },
+            css: {
+                files: ['css/{,**/}*.css']
+            },
+            js: {
+                files: ['js/{,**/}*.js', '!js/{,**/}*.min.js']/*,
+                tasks: ['jshint', 'uglify:dev']*/
+            }
+
+        },
     });
-    grunt.loadNpmTasks('grunt-contrib-uglify'); 
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 };
 
 

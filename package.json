@@ -16,6 +16,7 @@
   "gitHead": "48f8a65935dde0d04528d70218afc2b0245e053e",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-uglify": "~0.2.7"
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "^0.6.1"
   }
 }

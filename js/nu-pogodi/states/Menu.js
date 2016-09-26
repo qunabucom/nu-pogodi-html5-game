@@ -63,10 +63,10 @@ NuPogodi.MenuState.prototype = {
                 this.game.world.centerY - 55,
                 'start',
                 this.beginGame, this);
-        this.game.add.button(60, 472, 'button-left-down', this.beginGame, this);
-        this.game.add.button(60, 360, 'button-left-up', this.beginGame, this);
-        this.game.add.button(786, 472, 'button-right-down', this.beginGame, this);
-        this.game.add.button(786, 360, 'button-right-up', this.beginGame, this);
+        this.game.add.button(115, 634, 'button-left-down', this.beginGame, this);
+        this.game.add.button(120, 497, 'button-left-up', this.beginGame, this);
+        this.game.add.button(1141, 633, 'button-right-down', this.beginGame, this);
+        this.game.add.button(1140, 490, 'button-right-up', this.beginGame, this);
 
 
     },

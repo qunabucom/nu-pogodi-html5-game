@@ -16,7 +16,7 @@ var NuPogodi = NuPogodi || {};
     window.onload = function() {
 
         // Creating Phaser Game object
-        NuPogodi.game = new Phaser.Game(960, 640, Phaser.AUTO, 'board', null, true, true);
+        NuPogodi.game = new Phaser.Game(1350, 808, Phaser.AUTO, 'board', null, true, true);
 
         // Adding States to Game
         NuPogodi.game.state.add('Boot', NuPogodi.BootState);

@@ -99,22 +99,22 @@ NuPogodi.GameState.prototype = {
         // array of data to create sprites
         //[<key>,<image>,<posX>,<posY>]
         var spritesData = [
-            ['wolf-left', 'wolf-left', 390, 264],
-            ['basket-left-up', 'basket-left-up', 342, 276],
-            ['basket-left-down', 'basket-left-down', 335, 347],
-            ['wolf-right', 'wolf-right', 482, 266],
-            ['basket-right-up', 'basket-right-up', 560, 280],
-            ['basket-right-down', 'basket-right-down', 554, 346],
-            ['egg-left-up-1', 'egg-left-1', 276, 246],
-            ['egg-left-up-2', 'egg-left-2', 287, 257],
-            ['egg-left-up-3', 'egg-left-3', 307, 263],
-            ['egg-left-up-4', 'egg-left-4', 320, 270],
-            ['egg-left-up-5', 'egg-left-5', 333, 288],
-            ['egg-left-down-1', 'egg-left-1', 271, 317],
-            ['egg-left-down-2', 'egg-left-2', 286, 332],
-            ['egg-left-down-3', 'egg-left-3', 306, 339],
-            ['egg-left-down-4', 'egg-left-4', 319, 350],
-            ['egg-left-down-5', 'egg-left-5', 332, 362],
+            ['wolf-left', 'wolf-left', 554, 368],
+            ['basket-left-up', 'basket-left-up', 504, 368],
+            ['basket-left-down', 'basket-left-down', 509, 441],
+            ['wolf-right', 'wolf-right', 623, 368],
+            ['basket-right-up', 'basket-right-up', 764, 365],
+            ['basket-right-down', 'basket-right-down', 755, 443],
+            ['egg-left-up-1', 'egg-left-1', 431, 327],
+            ['egg-left-up-2', 'egg-left-2', 447, 343],
+            ['egg-left-up-3', 'egg-left-3', 472, 353],
+            ['egg-left-up-4', 'egg-left-4', 489, 362],
+            ['egg-left-up-5', 'egg-left-5', 503, 381],
+            ['egg-left-down-1', 'egg-left-1', 431, 408],
+            ['egg-left-down-2', 'egg-left-2', 447, 424],
+            ['egg-left-down-3', 'egg-left-3', 472, 434],
+            ['egg-left-down-4', 'egg-left-4', 489, 443],
+            ['egg-left-down-5', 'egg-left-5', 503, 462],
             ['egg-right-up-1', 'egg-right-1', 676, 248],
             ['egg-right-up-2', 'egg-right-2', 662, 254],
             ['egg-right-up-3', 'egg-right-3', 648, 262],
@@ -161,7 +161,12 @@ NuPogodi.GameState.prototype = {
             'egg-left-up',
             'egg-left-down',
             'egg-right-up',
-            'egg-right-down'
+            'egg-right-down',
+            'egg-left-1',
+            'egg-left-2',
+            'egg-left-3',
+            'egg-left-4',
+            'egg-left-5'
         ];
 
         // adding all sounds using in game
@@ -189,10 +194,10 @@ NuPogodi.GameState.prototype = {
         up.onDown.add(this.wolf.moveBasketUp, this.wolf);
         down.onDown.add(this.wolf.moveBasketDown, this.wolf);
 
-        this.game.add.button(60, 472, 'button-left-down', this.actionButtonLeftDown, this);
-        this.game.add.button(60, 360, 'button-left-up', this.actionButtonLeftUp, this);
-        this.game.add.button(786, 472, 'button-right-down', this.actionButtonRightDown, this);
-        this.game.add.button(786, 360, 'button-right-up', this.actionButtonRightUp, this);
+        this.game.add.button(115, 634, 'button-left-down', this.actionButtonLeftDown, this);
+        this.game.add.button(120, 497, 'button-left-up', this.actionButtonLeftUp, this);
+        this.game.add.button(1141, 633, 'button-right-down', this.actionButtonRightDown, this);
+        this.game.add.button(1140, 490, 'button-right-up', this.actionButtonRightUp, this);
 
         // setting timers for begin the game
         this.newEggTimer = this.game.time.now + 1000;
