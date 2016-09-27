@@ -105,42 +105,44 @@ NuPogodi.GameState.prototype = {
             ['wolf-right', 'wolf-right', 623, 368],
             ['basket-right-up', 'basket-right-up', 764, 365],
             ['basket-right-down', 'basket-right-down', 755, 443],
-            ['egg-left-up-1', 'egg-left-1', 431, 327],
-            ['egg-left-up-2', 'egg-left-2', 447, 343],
-            ['egg-left-up-3', 'egg-left-3', 472, 353],
-            ['egg-left-up-4', 'egg-left-4', 489, 362],
-            ['egg-left-up-5', 'egg-left-5', 503, 381],
-            ['egg-left-down-1', 'egg-left-1', 431, 408],
-            ['egg-left-down-2', 'egg-left-2', 447, 424],
-            ['egg-left-down-3', 'egg-left-3', 472, 434],
-            ['egg-left-down-4', 'egg-left-4', 489, 443],
-            ['egg-left-down-5', 'egg-left-5', 503, 462],
-            ['egg-right-up-1', 'egg-right-1', 676, 248],
-            ['egg-right-up-2', 'egg-right-2', 662, 254],
-            ['egg-right-up-3', 'egg-right-3', 648, 262],
-            ['egg-right-up-4', 'egg-right-4', 630, 273],
-            ['egg-right-up-5', 'egg-right-5', 616, 282],
-            ['egg-right-down-1', 'egg-right-1', 676, 320],
-            ['egg-right-down-2', 'egg-right-2', 663, 332],
-            ['egg-right-down-3', 'egg-right-3', 649, 335],
-            ['egg-right-down-4', 'egg-right-4', 632, 347],
-            ['egg-right-down-5', 'egg-right-5', 618, 357],
-            ['bird-left-1', 'bird-left-1', 328, 426],
-            ['bird-left-2', 'bird-left-2', 320, 392],
-            ['bird-left-3', 'bird-left-3', 304, 414],
-            ['bird-left-4', 'bird-left-4', 280, 414],
-            ['bird-left-5', 'bird-left-5', 252, 414],
-            ['bird-right-1', 'bird-right-1', 552, 420],
-            ['bird-right-2', 'bird-right-2', 618, 394],
-            ['bird-right-3', 'bird-right-3', 648, 410],
-            ['bird-right-4', 'bird-right-4', 666, 414],
-            ['bird-right-5', 'bird-right-5', 698, 414],
-            ['bird-life-1', 'bird-life', 600, 220],
-            ['bird-life-2', 'bird-life', 550, 220],
-            ['bird-life-3', 'bird-life', 500, 220],
-            ['bell-0', 'bell-0', 398, 174],
-            ['bell-1', 'bell-1', 398, 214],
-            ['hare', 'hare', 313, 165]
+            ['egg-left-up-1', 'egg-left-1', 431, 326],
+            ['egg-left-up-2', 'egg-left-2', 447, 341],
+            ['egg-left-up-3', 'egg-left-3', 471, 349],
+            ['egg-left-up-4', 'egg-left-4', 489, 361],
+            ['egg-left-up-5', 'egg-left-5', 503, 380],
+            ['egg-left-down-1', 'egg-left-1', 431, 407],
+            ['egg-left-down-2', 'egg-left-2', 447, 422],
+            ['egg-left-down-3', 'egg-left-3', 471, 430],
+            ['egg-left-down-4', 'egg-left-4', 489, 442],
+            ['egg-left-down-5', 'egg-left-5', 503, 461],
+            ['egg-right-up-1', 'egg-right-1', 901, 323],
+            ['egg-right-up-2', 'egg-right-2', 884, 339],
+            ['egg-right-up-3', 'egg-right-3', 864, 348],
+            ['egg-right-up-4', 'egg-right-4', 842, 359],
+            ['egg-right-up-5', 'egg-right-5', 827, 378],
+            ['egg-right-down-1', 'egg-right-1', 901, 405],
+            ['egg-right-down-2', 'egg-right-2', 884, 421],
+            ['egg-right-down-3', 'egg-right-3', 864, 430],
+            ['egg-right-down-4', 'egg-right-4', 842, 441],
+            ['egg-right-down-5', 'egg-right-5', 827, 460],
+            //['bird-left-1', 'bird-left-1', 328, 426],
+            ['bird-left-1', 'bird-left-1', -40+558, 526],
+            ['bird-left-2', 'bird-left-2', -40+558-8, 526-34], // -8, -34
+            ['bird-left-3', 'bird-left-3', -40+558-8-16, 526-34+22], // -16, +22
+            ['bird-left-4', 'bird-left-4', -40+558-8-16-24, 526-34+22], // -24, 0
+            ['bird-left-5', 'bird-left-5', -40+558-8-16-24-28, 526-34+22], // -28, 0
+            //['bird-right-1', 'bird-right-1', 552, 420],
+            ['bird-right-1', 'bird-right-1', 827, 500],
+            ['bird-right-2', 'bird-right-2', 827+10, 500+26], // -66 26
+            ['bird-right-3', 'bird-right-3', 827+10+30, 500+16], // 30  16
+            ['bird-right-4', 'bird-right-4', 827+10+30+20, 500+16], // 20 0
+            ['bird-right-5', 'bird-right-5', 827+10+30+20+30, 500+16], // 30 0
+            ['bird-life-1', 'bird-life', 692, 313],
+            ['bird-life-2', 'bird-life', 692+40, 313],
+            ['bird-life-3', 'bird-life', 692+80, 313],
+            ['bell-0', 'bell-0', 540, 235],
+            ['bell-1', 'bell-1', 537, 268],
+            ['hare', 'hare', 459, 209]
         ];
 
         // adding all sprites using in game
@@ -175,7 +177,7 @@ NuPogodi.GameState.prototype = {
         }
 
         // adding text showing actual score
-        this.score.savedText = this.game.add.text(600, 180, "0", {
+        this.score.savedText = this.game.add.text(670, 240, "0", {
             font: "36px lets_go_digitalregular",
             fill: "#000000",
             align: "right"
@@ -194,16 +196,64 @@ NuPogodi.GameState.prototype = {
         up.onDown.add(this.wolf.moveBasketUp, this.wolf);
         down.onDown.add(this.wolf.moveBasketDown, this.wolf);
 
-        this.game.add.button(115, 634, 'button-left-down', this.actionButtonLeftDown, this);
-        this.game.add.button(120, 497, 'button-left-up', this.actionButtonLeftUp, this);
-        this.game.add.button(1141, 633, 'button-right-down', this.actionButtonRightDown, this);
-        this.game.add.button(1140, 490, 'button-right-up', this.actionButtonRightUp, this);
+        var btn_ld = this.game.add.button(115, 634, 'button-left-down', this.actionButtonLeftDown, this, 0, 0, 1);
+        var btn_lu = this.game.add.button(120, 497, 'button-left-up', this.actionButtonLeftUp, this, 0, 0, 1);
+        var btn_rd = this.game.add.button(1141, 633, 'button-right-down', this.actionButtonRightDown, this, 0, 0, 1);
+        var btn_ru = this.game.add.button(1140, 490, 'button-right-up', this.actionButtonRightUp, this, 0, 0, 1);
 
         // setting timers for begin the game
         this.newEggTimer = this.game.time.now + 1000;
         this.eggMoveTimer = this.game.time.now + 1300;
         this.animationsTimer = this.game.time.now + 2500;
         this.hareShowTimer = this.game.time.now + 5000;
+
+        left.onDown.add(function() {
+            if (this.basketPosition) {
+              btn_lu.setFrames(1,1,1);
+            } else {
+              btn_ld.setFrames(1,1,1);
+            }
+        },this.wolf)
+        left.onUp.add(function() {
+          btn_lu.setFrames(0, 0, 1);
+          btn_ld.setFrames(0, 0, 1);
+        })
+
+      right.onDown.add(function() {
+        if (this.basketPosition) {
+          btn_ru.setFrames(1,1,1);
+        } else {
+          btn_rd.setFrames(1,1,1);
+        }
+      },this.wolf)
+      right.onUp.add(function() {
+        btn_ru.setFrames(0, 0, 1);
+        btn_rd.setFrames(0, 0, 1);
+      })
+
+      up.onDown.add(function() {
+        if (this.wolfPosition) {
+          btn_ru.setFrames(1,1,1);
+        } else {
+          btn_lu.setFrames(1,1,1);
+        }
+      },this.wolf)
+      up.onUp.add(function() {
+        btn_ru.setFrames(0, 0, 1);
+        btn_lu.setFrames(0, 0, 1);
+      })
+
+      down.onDown.add(function() {
+        if (this.wolfPosition) {
+          btn_rd.setFrames(1,1,1);
+        } else {
+          btn_ld.setFrames(1,1,1);
+        }
+      },this.wolf)
+      down.onUp.add(function() {
+        btn_rd.setFrames(0, 0, 1);
+        btn_ld.setFrames(0, 0, 1);
+      })
 
     },
     /**

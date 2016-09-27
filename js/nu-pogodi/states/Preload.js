@@ -25,13 +25,6 @@ NuPogodi.PreloadState.prototype = {
      * @see Phaser.State.preload
      */
     preload: function() {
-        // showing name and logo
-        this.game.add.sprite(this.game.world.centerX - 150, 200, 'logo-nerd');
-        this.game.add.text(this.game.world.centerX + 30, 200, "Nu Pogodi", {
-            font: "30px lets_go_digitalregular",
-            fill: "#000000",
-            align: "right"
-        });
 
         // adding sprites for loader bar
         this.game.add.sprite(this.game.world.centerX - 101,
@@ -94,6 +87,16 @@ NuPogodi.PreloadState.prototype = {
           'basket-left-down',
           'basket-right-up',
           'basket-right-down',
+          'egg-left-1',
+          'egg-left-2',
+          'egg-left-3',
+          'egg-left-4',
+          'egg-left-5',
+          'egg-right-1',
+          'egg-right-2',
+          'egg-right-3',
+          'egg-right-4',
+          'egg-right-5',
         ]
 
         // loading images using array of names
@@ -106,8 +109,13 @@ NuPogodi.PreloadState.prototype = {
 
         // spritesheet with blinking bird
         this.game.load.spritesheet('bird-life',
-                './assets/sprites/bird-life.svg',
-                27, 24);
+                './assets/sprites/bird-life.png',
+                39, 36);
+
+      this.game.load.spritesheet('button-left-down', './assets/sprites/button-left-down.png', 92, 92);
+      this.game.load.spritesheet('button-left-up', './assets/sprites/button-left-up.png', 81, 83);
+      this.game.load.spritesheet('button-right-down', './assets/sprites/button-right-down.png', 94, 94);
+      this.game.load.spritesheet('button-right-up', './assets/sprites/button-right-up.png', 98, 104);
 
         // array has audio files name without path and extension
         var audioData = [

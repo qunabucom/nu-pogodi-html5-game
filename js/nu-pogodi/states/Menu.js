@@ -39,19 +39,6 @@ NuPogodi.MenuState.prototype = {
             );
         }
 
-        //adding NerdLab logo and NuPogodi name
-        this.game.add.sprite(this.game.world.centerX - 150, 200, 'logo-nerd');
-        this.game.add.text(
-                this.game.world.centerX + 30,
-                200,
-                "Nu Pogodi",
-                {
-                    font: "30px lets_go_digitalregular",
-                    fill: "#000000",
-                    align: "right"
-                }
-        );
-
         // adding beginGame function for space and enter
         var enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
         enter.onDown.add(this.beginGame, this);
@@ -63,10 +50,10 @@ NuPogodi.MenuState.prototype = {
                 this.game.world.centerY - 55,
                 'start',
                 this.beginGame, this);
-        this.game.add.button(115, 634, 'button-left-down', this.beginGame, this);
-        this.game.add.button(120, 497, 'button-left-up', this.beginGame, this);
-        this.game.add.button(1141, 633, 'button-right-down', this.beginGame, this);
-        this.game.add.button(1140, 490, 'button-right-up', this.beginGame, this);
+        this.game.add.button(115, 634, 'button-left-down', this.beginGame, this, 0, 0, 1);
+        this.game.add.button(120, 497, 'button-left-up', this.beginGame, this, 0, 0, 1);
+        this.game.add.button(1141, 633, 'button-right-down', this.beginGame, this, 0, 0, 1);
+        this.game.add.button(1140, 490, 'button-right-up', this.beginGame, this, 0, 0, 1);
 
 
     },

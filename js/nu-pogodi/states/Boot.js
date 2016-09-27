@@ -20,9 +20,8 @@ NuPogodi.BootState = function() {
 NuPogodi.BootState.prototype = {
     preload: function() {
         // loading assets for PreloadState
-        this.game.load.image('loader-empty', './assets/sprites/loader-empty.svg');
-        this.game.load.image('loader-full', './assets/sprites/loader-full.svg');
-        this.game.load.image('logo-nerd', './assets/sprites/logo-nerd.svg');
+        this.game.load.image('loader-empty', './assets/sprites/loader-empty.png');
+        this.game.load.image('loader-full', './assets/sprites/loader-full.png');
     },
     create: function() {    
         // set scalling mode and resize game
