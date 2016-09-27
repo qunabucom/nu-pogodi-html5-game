@@ -101,21 +101,34 @@ NuPogodi.PreloadState.prototype = {
 
         // loading images using array of names
         for (var i = 0; i < imagesData.length; i++) {
+          var isPng = pngs.indexOf(imagesData[i]) != -1;
             this.game.load.image(imagesData[i],
                     './assets/sprites/'
+                    + ( isPng ? NuPogodi.city + '/' : '' )
                     + imagesData[i]
-                    + (pngs.indexOf(imagesData[i]) == -1 ? '.svg' : '.png'));
+                    + ( isPng ? '.png' : '.svg' ));
         }
 
         // spritesheet with blinking bird
-        this.game.load.spritesheet('bird-life',
-                './assets/sprites/bird-life.png',
-                39, 36);
 
-      this.game.load.spritesheet('button-left-down', './assets/sprites/button-left-down.png', 92, 92);
-      this.game.load.spritesheet('button-left-up', './assets/sprites/button-left-up.png', 81, 83);
-      this.game.load.spritesheet('button-right-down', './assets/sprites/button-right-down.png', 94, 94);
-      this.game.load.spritesheet('button-right-up', './assets/sprites/button-right-up.png', 98, 104);
+
+      switch (NuPogodi.city) {
+        case "gdansk":
+          this.game.load.spritesheet('bird-life', './assets/sprites/'+NuPogodi.city+'/bird-life.png', 39, 36);
+          break;
+        case "gdynia":
+          this.game.load.spritesheet('bird-life', './assets/sprites/'+NuPogodi.city+'/bird-life.png', 39, 43);
+          break;
+        case "poznan":
+          this.game.load.spritesheet('bird-life', './assets/sprites/'+NuPogodi.city+'/bird-life.png', 49, 43);
+          break;
+      }
+
+
+      this.game.load.spritesheet('button-left-down', './assets/sprites/'+NuPogodi.city+'/button-left-down.png', 92, 92);
+      this.game.load.spritesheet('button-left-up', './assets/sprites/'+NuPogodi.city+'/button-left-up.png', 81, 83);
+      this.game.load.spritesheet('button-right-down', './assets/sprites/'+NuPogodi.city+'/button-right-down.png', 94, 94);
+      this.game.load.spritesheet('button-right-up', './assets/sprites/'+NuPogodi.city+'/button-right-up.png', 98, 104);
 
         // array has audio files name without path and extension
         var audioData = [

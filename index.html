@@ -12,10 +12,37 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/style.css" type="text/css" />
     </head>
     <body>
-        <p class="font-starter">START</p>
+
+    <main>
         <div id="wrap">
             <div id="board"></div>
         </div>
+
+        <div class="vpos">
+            <div class="inner">
+                <h1>
+                    <img src="img/header.png" alt="wybierz grę"/>
+                </h1>
+                <ul class="crew">
+                    <li data-id="gdynia">
+                        <img src="img/korasrz.png" alt="Korsarz"/>
+                    </li>
+                    <li data-id="poznan">
+                        <img src="img/zboczek.png" alt="Zboczek"/>
+                    </li>
+                    <li data-id="gdansk">
+                        <img src="img/cukinsyn.png" alt="Cukinsyn"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+        <div class="bg">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+        </div>
+
         <script data-main="js" src="js/nu-pogodi/app.js"></script>
         
         <script data-main="js" src="js/libs/phaser/phaser.js"></script>
@@ -31,6 +58,23 @@ and open the template in the editor.
         <script data-main="js" src="js/nu-pogodi/states/Game.js"></script>
         <script data-main="js" src="js/nu-pogodi/states/Menu.js"></script>
         <script data-main="js" src="js/nu-pogodi/states/Preload.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+    <script>
+        $('main ul li').hover(function() {
+            $('main ul li').not(this).addClass('unhover');
+            $(this).addClass('hover')
+        }, function() {
+            $('main ul li').removeClass('hover unhover');
+        })
+        $('main ul li').click(function() {
+            $('#wrap').addClass('show');
+            window.createGame($(this).attr('data-id'));
+        })
+    </script>
+
 
         <script src="//localhost:35729/livereload.js" async></script>
 

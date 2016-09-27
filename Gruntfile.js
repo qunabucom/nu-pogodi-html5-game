@@ -35,6 +35,10 @@ module.exports = function(grunt) {
             js: {
                 files: ['js/{,**/}*.js', '!js/{,**/}*.min.js']/*,
                 tasks: ['jshint', 'uglify:dev']*/
+            },
+            html: {
+                files: ['{,**/}*.html', '*.html']/*,
+                 tasks: ['jshint', 'uglify:dev']*/
             }
 
         },

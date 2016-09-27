@@ -98,7 +98,9 @@ NuPogodi.GameState.prototype = {
 
         // array of data to create sprites
         //[<key>,<image>,<posX>,<posY>]
-        var spritesData = [
+        var spritesData = [];
+        if (NuPogodi.city=='gdansk') {
+          var spritesData = [
             ['wolf-left', 'wolf-left', 554, 368],
             ['basket-left-up', 'basket-left-up', 504, 368],
             ['basket-left-down', 'basket-left-down', 509, 441],
@@ -126,24 +128,121 @@ NuPogodi.GameState.prototype = {
             ['egg-right-down-4', 'egg-right-4', 842, 441],
             ['egg-right-down-5', 'egg-right-5', 827, 460],
             //['bird-left-1', 'bird-left-1', 328, 426],
-            ['bird-left-1', 'bird-left-1', -40+558, 526],
-            ['bird-left-2', 'bird-left-2', -40+558-8, 526-34], // -8, -34
-            ['bird-left-3', 'bird-left-3', -40+558-8-16, 526-34+22], // -16, +22
-            ['bird-left-4', 'bird-left-4', -40+558-8-16-24, 526-34+22], // -24, 0
-            ['bird-left-5', 'bird-left-5', -40+558-8-16-24-28, 526-34+22], // -28, 0
+            ['bird-left-1', 'bird-left-1', -40 + 558, 526],
+            ['bird-left-2', 'bird-left-2', -40 + 558 - 8, 526 - 34], // -8, -34
+            ['bird-left-3', 'bird-left-3', -40 + 558 - 8 - 16, 526 - 34 + 22], // -16, +22
+            ['bird-left-4', 'bird-left-4', -40 + 558 - 8 - 16 - 24, 526 - 34 + 22], // -24, 0
+            ['bird-left-5', 'bird-left-5', -40 + 558 - 8 - 16 - 24 - 28, 526 - 34 + 22], // -28, 0
             //['bird-right-1', 'bird-right-1', 552, 420],
             ['bird-right-1', 'bird-right-1', 827, 500],
-            ['bird-right-2', 'bird-right-2', 827+10, 500+26], // -66 26
-            ['bird-right-3', 'bird-right-3', 827+10+30, 500+16], // 30  16
-            ['bird-right-4', 'bird-right-4', 827+10+30+20, 500+16], // 20 0
-            ['bird-right-5', 'bird-right-5', 827+10+30+20+30, 500+16], // 30 0
+            ['bird-right-2', 'bird-right-2', 827 + 10, 500 + 26], // -66 26
+            ['bird-right-3', 'bird-right-3', 827 + 10 + 30, 500 + 16], // 30  16
+            ['bird-right-4', 'bird-right-4', 827 + 10 + 30 + 20, 500 + 16], // 20 0
+            ['bird-right-5', 'bird-right-5', 827 + 10 + 30 + 20 + 30, 500 + 16], // 30 0
             ['bird-life-1', 'bird-life', 692, 313],
-            ['bird-life-2', 'bird-life', 692+40, 313],
-            ['bird-life-3', 'bird-life', 692+80, 313],
+            ['bird-life-2', 'bird-life', 692 + 40, 313],
+            ['bird-life-3', 'bird-life', 692 + 80, 313],
             ['bell-0', 'bell-0', 540, 235],
             ['bell-1', 'bell-1', 537, 268],
             ['hare', 'hare', 459, 209]
+          ];
+        }
+      if (NuPogodi.city=='gdynia') {
+        var spritesData = [
+          ['wolf-left', 'wolf-left', 565, 362],
+          ['basket-left-up', 'basket-left-up', 472, 395],
+          ['basket-left-down', 'basket-left-down', 484, 436],
+          ['wolf-right', 'wolf-right', 644, 362],
+          ['basket-right-up', 'basket-right-up', 753, 395],
+          ['basket-right-down', 'basket-right-down', 754, 436],
+          ['egg-left-up-1', 'egg-left-1', 401, 311],
+          ['egg-left-up-2', 'egg-left-2', 428, 320],
+          ['egg-left-up-3', 'egg-left-3', 444, 336],
+          ['egg-left-up-4', 'egg-left-4', 463, 351],
+          ['egg-left-up-5', 'egg-left-5', 489, 367],
+          ['egg-left-down-1', 'egg-left-1', 401, 385],
+          ['egg-left-down-2', 'egg-left-2', 428, 394],
+          ['egg-left-down-3', 'egg-left-3', 444, 410],
+          ['egg-left-down-4', 'egg-left-4', 463, 425],
+          ['egg-left-down-5', 'egg-left-5', 489, 441],
+          ['egg-right-up-1', 'egg-right-1', 892, 324],
+          ['egg-right-up-2', 'egg-right-2', 881, 344],
+          ['egg-right-up-3', 'egg-right-3', 864, 353],
+          ['egg-right-up-4', 'egg-right-4', 852, 358],
+          ['egg-right-up-5', 'egg-right-5', 842, 376],
+          ['egg-right-down-1', 'egg-right-1', 932, 374],
+          ['egg-right-down-2', 'egg-right-2', 911, 394],
+          ['egg-right-down-3', 'egg-right-3', 890, 406],
+          ['egg-right-down-4', 'egg-right-4', 869, 420],
+          ['egg-right-down-5', 'egg-right-5', 842, 436],
+          //['bird-left-1', 'bird-left-1', 328, 426],
+          ['bird-left-1', 'bird-left-1', -40 + 558, 526],
+          ['bird-left-2', 'bird-left-2', -40 + 558 - 8, 526 - 34], // -8, -34
+          ['bird-left-3', 'bird-left-3', -40 + 558 - 8 - 16, 526 - 34 + 22], // -16, +22
+          ['bird-left-4', 'bird-left-4', -40 + 558 - 8 - 16 - 24, 526 - 34 + 22], // -24, 0
+          ['bird-left-5', 'bird-left-5', -40 + 558 - 8 - 16 - 24 - 28, 526 - 34 + 22], // -28, 0
+          //['bird-right-1', 'bird-right-1', 552, 420],
+          ['bird-right-1', 'bird-right-1', 827, 500],
+          ['bird-right-2', 'bird-right-2', 827 + 10, 500 + 26], // -66 26
+          ['bird-right-3', 'bird-right-3', 827 + 10 + 30, 500 + 16], // 30  16
+          ['bird-right-4', 'bird-right-4', 827 + 10 + 30 + 20, 500 + 16], // 20 0
+          ['bird-right-5', 'bird-right-5', 827 + 10 + 30 + 20 + 30, 500 + 16], // 30 0
+          ['bird-life-1', 'bird-life', 692, 313],
+          ['bird-life-2', 'bird-life', 692 + 40, 313],
+          ['bird-life-3', 'bird-life', 692 + 80, 313],
+          ['bell-0', 'bell-0', 540, 235],
+          ['bell-1', 'bell-1', 537, 268],
+          ['hare', 'hare', 459, 209]
         ];
+      }
+      if (NuPogodi.city=='poznan') {
+        var spritesData = [
+          ['wolf-left', 'wolf-left', 213+354, 143+195],
+          ['basket-left-up', 'basket-left-up', 155+354, 171+195],
+          ['basket-left-down', 'basket-left-down', 162+354, 233+195],
+          ['wolf-right', 'wolf-right', 290+354, 143+195],
+          ['basket-right-up', 'basket-right-up', 406+354, 182+195],
+          ['basket-right-down', 'basket-right-down', 404+354, 233+195],
+          ['egg-left-up-1', 'egg-left-1', 408, 304],
+          ['egg-left-up-2', 'egg-left-2', 446, 316],
+          ['egg-left-up-3', 'egg-left-3', 465, 327],
+          ['egg-left-up-4', 'egg-left-4', 489, 342],
+          ['egg-left-up-5', 'egg-left-5', 507, 356],
+          ['egg-left-down-1', 'egg-left-1', 408, 385],
+          ['egg-left-down-2', 'egg-left-2', 446, 397],
+          ['egg-left-down-3', 'egg-left-3', 465, 408],
+          ['egg-left-down-4', 'egg-left-4', 489, 423],
+          ['egg-left-down-5', 'egg-left-5', 507, 437],
+          ['egg-right-up-1', 'egg-right-1', 906, 304],
+          ['egg-right-up-2', 'egg-right-2', 877, 316],
+          ['egg-right-up-3', 'egg-right-3', 852, 327],
+          ['egg-right-up-4', 'egg-right-4', 834, 342],
+          ['egg-right-up-5', 'egg-right-5', 815, 356],
+          ['egg-right-down-1', 'egg-right-1', 906, 385],
+          ['egg-right-down-2', 'egg-right-2', 877, 397],
+          ['egg-right-down-3', 'egg-right-3', 852, 408],
+          ['egg-right-down-4', 'egg-right-4', 834, 423],
+          ['egg-right-down-5', 'egg-right-5', 815, 437],
+          //['bird-left-1', 'bird-left-1', 328, 426],
+          ['bird-left-1', 'bird-left-1', -40 + 558, 526],
+          ['bird-left-2', 'bird-left-2', -40 + 558 - 8, 526 - 34], // -8, -34
+          ['bird-left-3', 'bird-left-3', -40 + 558 - 8 - 16, 526 - 34 + 22], // -16, +22
+          ['bird-left-4', 'bird-left-4', -40 + 558 - 8 - 16 - 24, 526 - 34 + 22], // -24, 0
+          ['bird-left-5', 'bird-left-5', -40 + 558 - 8 - 16 - 24 - 28, 526 - 34 + 22], // -28, 0
+          //['bird-right-1', 'bird-right-1', 552, 420],
+          ['bird-right-1', 'bird-right-1', 827, 500],
+          ['bird-right-2', 'bird-right-2', 827 + 10, 500 + 26], // -66 26
+          ['bird-right-3', 'bird-right-3', 827 + 10 + 30, 500 + 16], // 30  16
+          ['bird-right-4', 'bird-right-4', 827 + 10 + 30 + 20, 500 + 16], // 20 0
+          ['bird-right-5', 'bird-right-5', 827 + 10 + 30 + 20 + 30, 500 + 16], // 30 0
+          ['bird-life-1', 'bird-life', 692, 313],
+          ['bird-life-2', 'bird-life', 692 + 40, 313],
+          ['bird-life-3', 'bird-life', 692 + 80, 313],
+          ['bell-0', 'bell-0', 540, 235],
+          ['bell-1', 'bell-1', 537, 268],
+          ['hare', 'hare', 459, 209]
+        ];
+      }
 
         // adding all sprites using in game
         for (var i = 0; i < spritesData.length; i++) {
