@@ -106,6 +106,8 @@ NuPogodi.Egg.prototype = {
                 this.state.score.eggBroken();
                 this.state.audio['egg-crash'].play('', 0, 1, false);
                 this.state.animations.push(new NuPogodi.Bird(this.horizontal, this.state));
+                /** clearing all eggs when it's down */
+                this.state.eggs.clearAllAfterOneDie();
             }
 
             return true;

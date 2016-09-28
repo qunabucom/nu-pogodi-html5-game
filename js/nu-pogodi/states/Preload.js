@@ -47,8 +47,6 @@ NuPogodi.PreloadState.prototype = {
             'wolf-right',
             'basket-right-up',
             'basket-right-down',
-            'bell-0',
-            'bell-1',
             'egg-left-1',
             'egg-left-2',
             'egg-left-3',
@@ -76,32 +74,11 @@ NuPogodi.PreloadState.prototype = {
             'start'
         ];
 
-        var pngs = [
-          'wolf-left',
-          'wolf-right',
-          'button-left-down',
-          'button-left-up',
-          'button-right-down',
-          'button-right-up',
-          'basket-left-up',
-          'basket-left-down',
-          'basket-right-up',
-          'basket-right-down',
-          'egg-left-1',
-          'egg-left-2',
-          'egg-left-3',
-          'egg-left-4',
-          'egg-left-5',
-          'egg-right-1',
-          'egg-right-2',
-          'egg-right-3',
-          'egg-right-4',
-          'egg-right-5',
-        ]
+
 
         // loading images using array of names
         for (var i = 0; i < imagesData.length; i++) {
-          var isPng = pngs.indexOf(imagesData[i]) != -1;
+          var isPng = true;
             this.game.load.image(imagesData[i],
                     './assets/sprites/'
                     + ( isPng ? NuPogodi.city + '/' : '' )
@@ -113,13 +90,13 @@ NuPogodi.PreloadState.prototype = {
 
 
       switch (NuPogodi.city) {
-        case "gdansk":
+        case "poznan":
           this.game.load.spritesheet('bird-life', './assets/sprites/'+NuPogodi.city+'/bird-life.png', 39, 36);
           break;
-        case "gdynia":
+        case "gdansk":
           this.game.load.spritesheet('bird-life', './assets/sprites/'+NuPogodi.city+'/bird-life.png', 39, 43);
           break;
-        case "poznan":
+        case "gdynia":
           this.game.load.spritesheet('bird-life', './assets/sprites/'+NuPogodi.city+'/bird-life.png', 49, 43);
           break;
       }
@@ -137,7 +114,9 @@ NuPogodi.PreloadState.prototype = {
             'egg-left-up',
             'egg-left-down',
             'egg-right-up',
-            'egg-right-down'
+            'egg-right-down',
+            'game-over',
+            'bird'
         ];
 
         // loading audio using array of names

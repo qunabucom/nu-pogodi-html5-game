@@ -46,7 +46,7 @@ NuPogodi.MenuState.prototype = {
         space.onDown.add(this.beginGame, this);
 
         // adding buttons whit beginGame function
-        this.game.add.button(this.game.world.centerX - 120,
+        this.game.add.button(this.game.world.centerX - 100,
                 this.game.world.centerY - 55,
                 'start',
                 this.beginGame, this);

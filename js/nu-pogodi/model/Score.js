@@ -108,6 +108,7 @@ NuPogodi.Score.prototype = {
                 spriteReset = 'bird-life-3';
                 break;
             default:
+                this.state.audio['game-over'].play();
                 this.state.endGame();
         }
         
@@ -142,7 +143,7 @@ NuPogodi.Score.prototype = {
         this.savedEggs = 0;
         this.brokenEggs = 0;
         this.level = 0;
-        this.savedText.setText('0');
+        this.savedText.setText('');
     }
 };
 

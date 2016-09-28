@@ -28,17 +28,24 @@ and open the template in the editor.
 
 }
 
+@import 'https://fonts.googleapis.com/css?family=Cutive+Mono&subset=latin-ext';
+.cutive,
+.console {
+  font-family: 'Cutive Mono', monospace;
+  color: #00fb30;
+}
+
 #board canvas {
   margin: 0 auto;
   background-image: url('../img/background.png');
   margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  //position: absolute;
+  //top: 0; left: 0; bottom: 0; right: 0;
   background-size: 100%;
 }
-#board.gdansk canvas { background-image: url('../img/background_gdansk.png'); }
-#board.gdynia canvas { background-image: url('../img/background_gdynia.png'); }
-#board.poznan canvas { background-image: url('../img/background_poznan.png'); }
+#board.korsarz canvas { background-image: url('../img/background_korsarz.png'); }
+#board.zboczek canvas { background-image: url('../img/background_zboczek.png'); }
+#board.cukinsyn canvas { background-image: url('../img/background_cukinsyn.png'); }
 
 p.font-starter {
   color: #fff;
@@ -170,16 +177,46 @@ ul.crew {
   width: 100%;
   height: 100%;
   opacity: 0;
-  @include transform(scale3d(0,0,0));
-  @include transition(transform 0.9s ease-in, opacity 0.9s ease-in);
+
+  //@include transform(scale3d(0.8,0.8,1));
+  @include transition(z-index 0.2s ease-in, opacity 0.2s ease-in, transform 0.2s ease-in);
   &.show {
+    @include transition(z-index 0.9s ease-in, opacity 0.9s ease-in, transform 0.9s ease-in);
     z-index: 100;
     opacity: 1;
-    @include transform(scale3d(1,1,1));
+    //@include transform(scale3d(1,1,1));
   }
+  text-align: center;
+  &:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  #board {
+    display: inline-block;
+    max-width:1350px;
+    max-height:800px;
+    width: 90%;
+    height: 90%;
+    vertical-align: middle;
+  }
+
+  button {
+    background: none;
+    border:none;
+    outline: none;
+    -webkit-appearance: normal;
+    position: absolute;
+    right: 15px;
+    top:5px;
+  }
+
 }
 .vpos {
   height: 100%;
+  position: relative;
+  z-index: 1;
   &:after {
     content: '';
     display: inline-block;
@@ -190,4 +227,31 @@ ul.crew {
     display: inline-block;
     vertical-align: middle;
   }
+  h2 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+
+.typed-cursor{
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }

@@ -48,6 +48,7 @@ NuPogodi.Bird.prototype = {
         }
 
         if (this.step < 5) {
+            this.state.audio['bird'].play();
             // step increment 
             this.step++;
 

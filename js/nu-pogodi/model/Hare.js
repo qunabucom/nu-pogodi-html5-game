@@ -30,10 +30,6 @@ NuPogodi.Hare = function(state) {
             this.state.sprites['hare'].x,
             this.state.sprites['hare'].y
             );
-    this.state.sprites['bell-' + this.dingCount].reset(
-            this.state.sprites['bell-' + this.dingCount].x,
-            this.state.sprites['bell-' + this.dingCount].y
-            );
     
     this.state.isHare = true;
 };
@@ -46,17 +42,8 @@ NuPogodi.Hare.prototype = {
      */
     move: function() {
         'use strict';
-        
-        // kill actual bell sprite
-        this.state.sprites['bell-' + (this.dingCount % 2)].kill();
-
         if (this.dingCount < 7) {
             this.dingCount++;
-
-            this.state.sprites['bell-' + (this.dingCount % 2)].reset(
-                    this.state.sprites['bell-' + (this.dingCount % 2)].x,
-                    this.state.sprites['bell-' + (this.dingCount % 2)].y
-                    );
         } else {
             this.hide();
         }

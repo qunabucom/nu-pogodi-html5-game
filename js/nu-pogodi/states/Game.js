@@ -99,7 +99,7 @@ NuPogodi.GameState.prototype = {
         // array of data to create sprites
         //[<key>,<image>,<posX>,<posY>]
         var spritesData = [];
-        if (NuPogodi.city=='gdansk') {
+        if (NuPogodi.city=='cukinsyn') {
           var spritesData = [
             ['wolf-left', 'wolf-left', 554, 368],
             ['basket-left-up', 'basket-left-up', 504, 368],
@@ -128,26 +128,24 @@ NuPogodi.GameState.prototype = {
             ['egg-right-down-4', 'egg-right-4', 842, 441],
             ['egg-right-down-5', 'egg-right-5', 827, 460],
             //['bird-left-1', 'bird-left-1', 328, 426],
-            ['bird-left-1', 'bird-left-1', -40 + 558, 526],
-            ['bird-left-2', 'bird-left-2', -40 + 558 - 8, 526 - 34], // -8, -34
-            ['bird-left-3', 'bird-left-3', -40 + 558 - 8 - 16, 526 - 34 + 22], // -16, +22
-            ['bird-left-4', 'bird-left-4', -40 + 558 - 8 - 16 - 24, 526 - 34 + 22], // -24, 0
-            ['bird-left-5', 'bird-left-5', -40 + 558 - 8 - 16 - 24 - 28, 526 - 34 + 22], // -28, 0
+            ['bird-left-1', 'bird-left-1', 477,518],
+            ['bird-left-2', 'bird-left-2', 496,550], // -8, -34
+            ['bird-left-3', 'bird-left-3', 453,535], // -16, +22
+            ['bird-left-4', 'bird-left-4', 408,541], // -24, 0
+            ['bird-left-5', 'bird-left-5', 370,554], // -28, 0
             //['bird-right-1', 'bird-right-1', 552, 420],
-            ['bird-right-1', 'bird-right-1', 827, 500],
-            ['bird-right-2', 'bird-right-2', 827 + 10, 500 + 26], // -66 26
-            ['bird-right-3', 'bird-right-3', 827 + 10 + 30, 500 + 16], // 30  16
-            ['bird-right-4', 'bird-right-4', 827 + 10 + 30 + 20, 500 + 16], // 20 0
-            ['bird-right-5', 'bird-right-5', 827 + 10 + 30 + 20 + 30, 500 + 16], // 30 0
-            ['bird-life-1', 'bird-life', 692, 313],
-            ['bird-life-2', 'bird-life', 692 + 40, 313],
-            ['bird-life-3', 'bird-life', 692 + 80, 313],
-            ['bell-0', 'bell-0', 540, 235],
-            ['bell-1', 'bell-1', 537, 268],
-            ['hare', 'hare', 459, 209]
+            ['bird-right-1', 'bird-right-1', 802,509],
+            ['bird-right-2', 'bird-right-2', 810,546], // -66 26
+            ['bird-right-3', 'bird-right-3', 857,531], // 30  16
+            ['bird-right-4', 'bird-right-4', 903,538], // 20 0
+            ['bird-right-5', 'bird-right-5', 935,550], // 30 0
+            ['bird-life-1', 'bird-life', 692, 283],
+            ['bird-life-2', 'bird-life', 692 + 40, 283],
+            ['bird-life-3', 'bird-life', 692 + 80, 283],
+            ['hare', 'hare', 454, 213]
           ];
         }
-      if (NuPogodi.city=='gdynia') {
+      if (NuPogodi.city=='korsarz') {
         var spritesData = [
           ['wolf-left', 'wolf-left', 565, 362],
           ['basket-left-up', 'basket-left-up', 472, 395],
@@ -176,26 +174,24 @@ NuPogodi.GameState.prototype = {
           ['egg-right-down-4', 'egg-right-4', 869, 420],
           ['egg-right-down-5', 'egg-right-5', 842, 436],
           //['bird-left-1', 'bird-left-1', 328, 426],
-          ['bird-left-1', 'bird-left-1', -40 + 558, 526],
-          ['bird-left-2', 'bird-left-2', -40 + 558 - 8, 526 - 34], // -8, -34
-          ['bird-left-3', 'bird-left-3', -40 + 558 - 8 - 16, 526 - 34 + 22], // -16, +22
-          ['bird-left-4', 'bird-left-4', -40 + 558 - 8 - 16 - 24, 526 - 34 + 22], // -24, 0
-          ['bird-left-5', 'bird-left-5', -40 + 558 - 8 - 16 - 24 - 28, 526 - 34 + 22], // -28, 0
+          ['bird-left-1', 'bird-left-1', 401+96,435+78],
+          ['bird-left-2', 'bird-left-2', 401+111,435+50],
+          ['bird-left-3', 'bird-left-3', 401+78,435+28],
+          ['bird-left-4', 'bird-left-4', 401+42,435+9],
+          ['bird-left-5', 'bird-left-5', 401+0,435+0],
           //['bird-right-1', 'bird-right-1', 552, 420],
-          ['bird-right-1', 'bird-right-1', 827, 500],
-          ['bird-right-2', 'bird-right-2', 827 + 10, 500 + 26], // -66 26
-          ['bird-right-3', 'bird-right-3', 827 + 10 + 30, 500 + 16], // 30  16
-          ['bird-right-4', 'bird-right-4', 827 + 10 + 30 + 20, 500 + 16], // 20 0
-          ['bird-right-5', 'bird-right-5', 827 + 10 + 30 + 20 + 30, 500 + 16], // 30 0
+          ['bird-right-1', 'bird-right-1', 791,518],
+          ['bird-right-2', 'bird-right-2', 810, 495],
+          ['bird-right-3', 'bird-right-3', 837, 475],
+          ['bird-right-4', 'bird-right-4', 871, 460],
+          ['bird-right-5', 'bird-right-5', 918, 460],
           ['bird-life-1', 'bird-life', 692, 313],
           ['bird-life-2', 'bird-life', 692 + 40, 313],
           ['bird-life-3', 'bird-life', 692 + 80, 313],
-          ['bell-0', 'bell-0', 540, 235],
-          ['bell-1', 'bell-1', 537, 268],
-          ['hare', 'hare', 459, 209]
+          ['hare', 'hare', 408, 226]
         ];
       }
-      if (NuPogodi.city=='poznan') {
+      if (NuPogodi.city=='zboczek') {
         var spritesData = [
           ['wolf-left', 'wolf-left', 213+354, 143+195],
           ['basket-left-up', 'basket-left-up', 155+354, 171+195],
@@ -224,23 +220,21 @@ NuPogodi.GameState.prototype = {
           ['egg-right-down-4', 'egg-right-4', 834, 423],
           ['egg-right-down-5', 'egg-right-5', 815, 437],
           //['bird-left-1', 'bird-left-1', 328, 426],
-          ['bird-left-1', 'bird-left-1', -40 + 558, 526],
-          ['bird-left-2', 'bird-left-2', -40 + 558 - 8, 526 - 34], // -8, -34
-          ['bird-left-3', 'bird-left-3', -40 + 558 - 8 - 16, 526 - 34 + 22], // -16, +22
-          ['bird-left-4', 'bird-left-4', -40 + 558 - 8 - 16 - 24, 526 - 34 + 22], // -24, 0
-          ['bird-left-5', 'bird-left-5', -40 + 558 - 8 - 16 - 24 - 28, 526 - 34 + 22], // -28, 0
+          ['bird-left-1', 'bird-left-1', 490,507],
+          ['bird-left-2', 'bird-left-2', 458, 503], // -8, -34
+          ['bird-left-3', 'bird-left-3', 428, 490], // -16, +22
+          ['bird-left-4', 'bird-left-4', 386, 497], // -24, 0
+          ['bird-left-5', 'bird-left-5', 356, 516], // -28, 0
           //['bird-right-1', 'bird-right-1', 552, 420],
-          ['bird-right-1', 'bird-right-1', 827, 500],
-          ['bird-right-2', 'bird-right-2', 827 + 10, 500 + 26], // -66 26
-          ['bird-right-3', 'bird-right-3', 827 + 10 + 30, 500 + 16], // 30  16
-          ['bird-right-4', 'bird-right-4', 827 + 10 + 30 + 20, 500 + 16], // 20 0
-          ['bird-right-5', 'bird-right-5', 827 + 10 + 30 + 20 + 30, 500 + 16], // 30 0
-          ['bird-life-1', 'bird-life', 692, 313],
-          ['bird-life-2', 'bird-life', 692 + 40, 313],
-          ['bird-life-3', 'bird-life', 692 + 80, 313],
-          ['bell-0', 'bell-0', 540, 235],
-          ['bell-1', 'bell-1', 537, 268],
-          ['hare', 'hare', 459, 209]
+          ['bird-right-1', 'bird-right-1', 811, 505],
+          ['bird-right-2', 'bird-right-2', 865, 506], // -66 26
+          ['bird-right-3', 'bird-right-3', 899, 493], // 30  16
+          ['bird-right-4', 'bird-right-4', 935, 509], // 20 0
+          ['bird-right-5', 'bird-right-5', 945, 539], // 30 0
+          ['bird-life-1', 'bird-life', 692, 263],
+          ['bird-life-2', 'bird-life', 692 + 40, 263],
+          ['bird-life-3', 'bird-life', 692 + 80, 263],
+          ['hare', 'hare', 464, 228]
         ];
       }
 
@@ -267,7 +261,9 @@ NuPogodi.GameState.prototype = {
             'egg-left-2',
             'egg-left-3',
             'egg-left-4',
-            'egg-left-5'
+            'egg-left-5',
+            'game-over',
+            'bird'
         ];
 
         // adding all sounds using in game
@@ -362,6 +358,7 @@ NuPogodi.GameState.prototype = {
      * @see Phaser.State#update
      */
     update: function() {
+
         if (this.game.time.now > this.newEggTimer) {
             var added = this.eggs.addNewEgg();
             var factor = this.factor();
@@ -371,12 +368,12 @@ NuPogodi.GameState.prototype = {
         }
 
         if (this.game.time.now > this.eggMoveTimer) {
-            console.log('saved eggs: '+this.score.savedEggs);
+            //console.log('saved eggs: '+this.score.savedEggs);
             var moved = this.eggs.moveNextEgg();
             this.eggMoveTimer = this.game.time.now
                     + ((moved) ? ((1000 - (1000 * this.factor())) / this.eggs.length + 1) : 0);
-            console.log('saved eggs: '+this.score.savedEggs)
-            console.log('moved: '+moved);
+            //console.log('saved eggs: '+this.score.savedEggs)
+            //console.log('moved: '+moved);
         }
 
 

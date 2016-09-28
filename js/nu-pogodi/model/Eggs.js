@@ -39,6 +39,8 @@ NuPogodi.Eggs = function(state) {
      */
     this.nextEgg = null;
 
+    this.stopAddingNewTimer = 0;
+
 };
 
 NuPogodi.Eggs.prototype = {
@@ -50,7 +52,6 @@ NuPogodi.Eggs.prototype = {
      */
     add: function(egg) {
         'use strict';
-
         // simple object as node. Both property are NuPogodi.Egg
         var node = {
             data: egg,
@@ -118,7 +119,6 @@ NuPogodi.Eggs.prototype = {
      */
     addNewEgg: function() {
         'use strict';
-
         var horizontal = (Math.random() > 0.5) ? true : false;
         var vertical = (Math.random() > 0.5) ? true : false;
 
@@ -143,6 +143,10 @@ NuPogodi.Eggs.prototype = {
      */
     moveNextEgg: function() {
         'use strict';
+
+        if (this.state.time.now < this.stopAddingNewTimer) {
+            return false;
+        }
 
         var hasMoved = false;
         var node = this.nextEgg;
@@ -173,6 +177,16 @@ NuPogodi.Eggs.prototype = {
         this.head = null;
         this.next = null;
         this.length = 0;
+    },
+    clearAllAfterOneDie: function() {
+        while(this.length) {
+            this.state.sprites[this.head.data.route + '-' + this.head.data.step].kill();
+            this.remove(this.head.data);
+        }
+        this.clear();
+        this.state.newEggTimer = this.state.time.now + 4000;
+        this.state.eggMoveTimer = this.state.time.now + 1300;
+        this.stopAddingNewTimer = this.state.time.now + 4000;
     }
 };
 

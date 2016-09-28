@@ -32,7 +32,7 @@ var NuPogodi = NuPogodi || {};
         // Starting whole game with Boot State
         NuPogodi.game.state.start('Boot');
 
-        document.querySelectorAll('#board')[0].className = NuPogodi.city;
+        //document.querySelectorAll('#board')[0].className = NuPogodi.city;
 
 
     };
